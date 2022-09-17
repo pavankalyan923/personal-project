@@ -32,12 +32,12 @@
       name: k8sproject-10001
       state: present
     environment:
-      KOPS_STATE_STORE: s3://k8sproject-10001
+      KOPS_STATE_STORE: s3://k8spavan923
 
 - name: update web servers
   hosts: localhost
 
   tasks:
   - name: Create Cluster
-    shell: kops create cluster --yes --state=s3://k8sproject-10001 --zones=ap-south-1a,ap-south-1b --node-count=2 --name=test.k8s.local
+    shell: kops create cluster --yes --state=s3://k8spavan923 --zones=ap-south-1a,ap-south-1b --node-count=2 --name=test.k8s.local
 ...
