@@ -5,5 +5,5 @@ COPY . .
 RUN mvn clean package
 
 # deploy war file to tomcat from mvn_build
-FROM tomcat:8.0
+FROM tomcat:9.0
 COPY --from=mvn_build /app/target/*.war /usr/local/tomcat/webapps
